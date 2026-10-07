@@ -1,0 +1,46 @@
+{
+  "name": "@mockmarlin/saas-contract",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "description": "JSON shapes for SaaS session, billing, notifications, uploads, and operations",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./merchants/redirects": {
+      "types": "./dist/merchants/redirects.d.ts",
+      "default": "./dist/merchants/redirects.js"
+    },
+    "./merchants/dodo": {
+      "types": "./dist/merchants/dodo.d.ts",
+      "default": "./dist/merchants/dodo.js"
+    },
+    "./merchants/stripe": {
+      "types": "./dist/merchants/stripe.d.ts",
+      "default": "./dist/merchants/stripe.js"
+    },
+    "./merchants/paddle": {
+      "types": "./dist/merchants/paddle.d.ts",
+      "default": "./dist/merchants/paddle.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "lint": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "typescript": "^5.9.2",
+    "vitest": "^5.0.2"
+  }
+}
